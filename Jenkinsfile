@@ -30,7 +30,7 @@ pipeline {
       }
       steps {
         echo 'deploy to staging'
-        createEnvironment('staging')
+        //createEnvironment('staging')
       }
     }
 
@@ -41,7 +41,7 @@ pipeline {
 
       steps {
         echo 'create custom environment'
-        createEnvironment(env.BRANCH_NAME)
+        //createEnvironment(env.BRANCH_NAME)
       }
     }
   }
