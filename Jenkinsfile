@@ -6,18 +6,6 @@ pipeline {
         sh 'docker build -t openjobs:latest .'
       }
     }
-    stage('Tests') {
-      steps {
-        parallel(
-          "Unit Tests": {
-
-          },
-          "Feature tests": {
-          }
-        )
-      }
-    }
-
     stage('Deploy to Staging') {
       when {
         expression { env.BRANCH_NAME == 'master' }
