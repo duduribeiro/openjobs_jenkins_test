@@ -15,7 +15,7 @@ pipeline {
         parallel(
           "Unit Tests": {
             sh 'docker-compose run --name unit --rm web rspec --exclude-pattern "**/features/*_spec.rb"'
-            
+
           },
           "Feature tests": {
             sh 'docker-compose run --name feature --rm web rspec spec/features/'
@@ -30,7 +30,7 @@ pipeline {
       }
       steps {
         echo 'deploy to staging'
-        //createEnvironment('staging')
+        createEnvironment('staging')
       }
     }
 
@@ -41,7 +41,7 @@ pipeline {
 
       steps {
         echo 'create custom environment'
-        //createEnvironment(env.BRANCH_NAME)
+        createEnvironment(env.BRANCH_NAME)
       }
     }
   }
