@@ -64,8 +64,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.0.5)
-    connection_pool (2.2.1)
+    concurrent-ruby (1.1.9)
+    connection_pool (2.2.5)
     diff-lcs (1.3)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
@@ -131,10 +131,10 @@ GEM
       pry (>= 0.9.10, < 0.11.0)
     public_suffix (2.0.5)
     puma (3.9.1)
-    rack (2.0.3)
+    rack (2.2.3)
     rack-mini-profiler (0.10.5)
       rack (>= 1.2.0)
-    rack-protection (2.0.0)
+    rack-protection (2.1.0)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -175,7 +175,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    redis (3.3.3)
+    redis (4.4.0)
     require_all (1.4.0)
     rollbar (2.14.1)
       multi_json
@@ -216,11 +216,10 @@ GEM
     sexp_processor (4.9.0)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
-    sidekiq (5.0.2)
-      concurrent-ruby (~> 1.0)
-      connection_pool (~> 2.2, >= 2.2.0)
+    sidekiq (5.2.0)
+      connection_pool (~> 2.2, >= 2.2.2)
       rack-protection (>= 1.5.0)
-      redis (~> 3.3, >= 3.3.3)
+      redis (>= 3.3.5, < 5)
     slack-notifier (2.2.1)
     slop (3.6.0)
     spring (2.0.2)
@@ -253,10 +252,6 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webpacker (2.0)
-      activesupport (>= 4.2)
-      multi_json (~> 1.2)
-      railties (>= 4.2)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -302,7 +297,6 @@ DEPENDENCIES
   turbolinks (~> 5)
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
-  webpacker
 
 RUBY VERSION
    ruby 2.4.0p0
